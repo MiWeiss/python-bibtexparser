@@ -209,7 +209,7 @@ class TestBibtexParserList(unittest.TestCase):
             res = bib.get_entry_list()
         with open('bibtexparser/tests/data/multiple_entries.bib', 'r') as bibfile:
             bib2 = BibTexParser(bibfile.read(), customization=cust2)
-            res2 = bib.get_entry_list()
+            res2 = bib2.get_entry_list()
         self.assertEqual(res, res2)
 
     def test_article_missing_coma(self):
